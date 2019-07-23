@@ -8,6 +8,7 @@ def fn(n, denoms, cache):
         return 0
 	if n < 0:
 		return float('inf')
+	# recurrence min for All i (n - denoms[i])
 	ans = float('inf')
 	for denom in denoms:
 		ans = min(ans, 1 + fn(n - denom, denoms, cache))
