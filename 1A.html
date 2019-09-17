@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id='inc' style="font-size: 15px;"onmouseover='incFont()'>Text Size Increases On Mouse Over</p>
+  </body>
+  <script type="text/javascript">
+    function incFont() {
+      var init = document.getElementById('inc').style.fontSize;
+      var val = Number(init.substring(0, init.indexOf('p')));
+      val += 5;
+      document.getElementById('inc').style.fontSize = val + 'px';
+    }
+  </script>
+</html>

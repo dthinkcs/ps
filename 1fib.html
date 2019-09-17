@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var n = parseInt(prompt("Enter n: "))
+      var curr = 0;
+      var next = 1;
+      for (var i = 0; i < n; i++) {
+        var tmp = curr;
+        curr = next;
+        next = next + tmp;
+      }
+      alert(`Fib(${n}) = ${curr}`);
+
+      n = parseInt(prompt("Enter n again: "))
+      document.write("<table>");
+      for (var i = 1; i <= n; i++) {
+        document.writeln(`<tr><td>${i}</td><td>${i*i}</td></tr>`)
+      }
+      document.write("</table>")
+
+    </script>
+  </body>
+</html>

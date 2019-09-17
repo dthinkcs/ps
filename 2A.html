@@ -1,0 +1,25 @@
+<html>
+  <head>
+  <title>Mouse Events Example</title>
+  <script type="text/javascript">
+  function handleEvent(e, ele="") {
+
+    var Info = "";
+    if (e.ctrlKey) {
+      Info += ("Ctrl was pressed ");
+      Info += "Event Name " + e;
+    }
+    if (e.shiftKey) {
+      Info += ("Shift was pressed ")
+      Info += ele;
+    }
+
+    alert(Info);
+    e.cancelBubble = true;
+  }
+  </script>
+</head>
+<body onclick="handleEvent(event)">
+  <P onclick="handleEvent(event, 'p was clicked on');">Use your mouse to click anywhere.</p>
+</body
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body align='center'>
+    <h1> Calculator JS </h1>
+    <form onsubmit="start(); return false;">
+      <input type="text" id="operand1" value="0">
+      <select id="mySelect" onchange=setOperator()>
+        <option selected='selected' value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="text" id="operand2" value="0"> <br/>
+      <input type="submit" name="" value="Calculate"> <br/>
+      <input type="text" id="ans">
+    </form>
+
+  <script type="text/javascript">
+    var operator = "+";
+    function setOperator() {
+      operator = document.getElementById("mySelect").value;
+    }
+
+    function start() {
+      var operand1 = Number(document.getElementById('operand1').value);
+      var operand2 = Number(document.getElementById('operand2').value);
+      if (typeof(operand1) === "number" && typeof(operand2) === "number" && !isNaN(operand1) && !isNaN(operand2)) {
+        var ansNode = document.getElementById('ans');
+        ansNode.value = eval(operand1 + operator + operand2);
+      } else {
+        alert('invalid input');
+      }
+    }
+
+
+  </script>
+  </body>
+</html>

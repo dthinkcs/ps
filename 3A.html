@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <img src="MIT.gif" onclick="f1(event)">
+    <table onclick="f2(event)" border=1>
+      <tr>
+        <td>MIT</td>
+        <td>mit.edu</td>
+      </tr>
+    </table>
+
+    <script>
+      function f1(e) {
+        alert('you clicked the image');
+        e = true;
+      }
+      function f2(e) {
+        alert('you clicked the table');
+        e = true;
+      }
+    </script>
+  </body>
+</html>

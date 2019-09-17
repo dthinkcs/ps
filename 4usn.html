@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form class="" onsubmit="start(); startSem();">
+
+      Enter USN <input type="text" id="textField" value=""> <br/>
+      Enter Semester: <input type="text" id="semField" value=""> <br/>
+      <input type="submit">
+    </form>
+
+    <script type="text/javascript">
+
+
+      function validate(usn) {
+        // len 1DW22AA333
+        var patt = new RegExp("^[1-4][A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$");
+        var res = patt.test(usn);
+        return res;
+
+      }
+      function start() {
+        var usn = document.getElementById('textField').value;
+        if (validate(usn)) {
+          alert('Valid USN')
+        } else {
+          alert('INVALID USN')
+        }
+      }
+
+      function startSem() {
+        var sem = document.getElementById('semField').value;
+        if ((new RegExp('^[1-8]$')).test(sem)) {
+          alert('Valid Sem')
+        } else {
+          alert('INVALID Sem: value must be between 1 and 8 (inclusive)')
+        }
+      }
+
+
+    </script>
+  </body>
+</html>

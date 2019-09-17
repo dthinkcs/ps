@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function leftMostVowelPos(s) {
+        for (var i = s.length - 1; i >= 0; i--) {
+          vowels = "aeiou";
+          for (var vowel of vowels) {
+            if (s[i].toLowerCase() ===  vowel) {
+              return i + 1;
+            }
+          }
+        }
+        return -1;
+      }
+      var pos = leftMostVowelPos(prompt("Enter s:"));
+      if (pos == -1) {
+        alert("Could not find vowel")
+      } else {
+        alert(`Found at position ${pos}`)
+      }
+
+      function reverseDig(n) {
+        var rev = 0;
+        while (n != 0) {
+          rev = 10 * rev + n % 10;
+          n = Math.floor(n / 10);
+        }
+        return rev;
+      }
+      var n = parseInt(prompt("Enter Number: "));
+      if (Number.isNaN(n)) {
+        alert("Invalid Number");
+      } else {
+        alert(`Reverse Number: ${reverseDig(n)}`);
+      }
+
+    </script>
+  </body>
+</html>
