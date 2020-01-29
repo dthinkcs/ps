@@ -16,7 +16,8 @@ def num_of_moves(n):
     # (we are moving from top to bottom left to right)
     for i in range(1, n):
         for j in range(1, n):
-            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1] 
+    
     
     #return the answer in the last cell (diagonally opposite)
     return dp[n - 1][n - 1]
