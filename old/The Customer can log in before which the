@@ -1,0 +1,15 @@
+The Customer can log in before which the customer has to be authenticated and authorized.
+
+The Customer can search for a flight, search for a round trip and search for a one-way flight before which the customer has to provide departure and return, destination and travelers.
+
+The Customer can also reserve a  flight.
+
+<<extends>> means that some specific work can be done which is a specialization of a generic use case pointed by the outgoing arrow.
+
+<<uses>> means that some specific work must be done before doing the current work
+
+Customer has access to login(), searchFlight(), reserveFlight() 
+
+Normally
+ you would store database connection
+  in a configuration file separate from the code. This is done to ensure that the file remains out of version control and source control. This way the onus is now on the administrators to secure the credentials of the database and the developers work on an abstraction and are not responsible for securing the database credentials.
