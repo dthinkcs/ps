@@ -102,64 +102,19 @@ def isOutOfOrder(i, num, array):
         return num < array[i - 1]
 27
     return num > array[i + 1] or num < array[i - 1]
-28
-​
-Help:Hide
-Show
-Hint #1Hint #2Hint #3Optimal Space & Time Complexity
-Realize that even a single out-of-order number in the input array can call for a large subarray to have to be sorted. This is because, depending on how out-of-place the number is, it might need to be moved very far away from its original position in order to be in its sorted position.
-Output:Custom Output
-Raw Output
-Run your code when you feel ready.
-​
-Tests:Our Tests
-Your Tests
-Hide
-Show
 
-No changes made.
-1
-import program
-2
-import unittest
-3
-​
-4
-​
-5
+
 class TestProgram(unittest.TestCase):
-6
-​
-7
     def test_case_1(self):
-8
-        self.assertEqual(program.subarraySort([1, 2]), [-1, -1])
-9
-​
-10
+        self.assertEqual(subarraySort([1, 2]), [-1, -1])
+
     def test_case_2(self):
-11
-        self.assertEqual(program.subarraySort([2, 1]), [0, 1])
-12
-​
-13
+        self.assertEqual(subarraySort([2, 1]), [0, 1])
+
     def test_case_3(self):
-14
-        self.assertEqual(program.subarraySort([1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19]), [3, 9])
-15
-​
-16
+        self.assertEqual(subarraySort([1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19]), [3, 9])
+
     def test_case_4(self):
-17
-        self.assertEqual(program.subarraySort([1, 2, 4, 7, 10, 11, 7, 12, 7, 7, 16, 18, 19]), [4, 9])
-18
-​
-19
-    def test_case_5(self):
-Video ExplanationGo to Conceptual OverviewGo to Code WalkthroughQuestions List
-Copyright © 2019 AlgoExpert, LLC. All rights reserved.
-Become An Affiliate
-Contact Us
-FAQ
-Legal Stuff
-Privacy Policy
+        self.assertEqual(subarraySort([1, 2, 4, 7, 10, 11, 7, 12, 7, 7, 16, 18, 19]), [4, 9])
+
+unittest.main()

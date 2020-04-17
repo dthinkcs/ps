@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title>Javascript assignments</title>
+<style>
+body {
+margin: 0;
+}
+.container {
+width: 800px;
+margin: 0 auto;
+}
+.box {
+width: 200px;
+height: 200px;
+margin-top: 20px;
+border: 2px solid black;
+}
+.foodForm input,
+.foodForm button {
+display: block;
+}
+
+.foodForm input {
+margin-bottom: .5em;
+}
+.modal {
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, .7);
+position: absolute;
+z-index: 1000;
+top: 0;
+left: 0;
+}
+.modalContent {
+background: white;
+height: 200px;
+width: 50%;
+position: relative;
+margin: 200px auto;
+padding: 20px;
+opacity: 1;
+}
+.closeModal {
+position: absolute;
+top: 0;
+right: 0;
+padding: 5px;
+border: 2px solid blue;
+background: blue;
+color: white;
+}
+.closeModal:hover {
+cursor: pointer;
+color: blue;
+background: white;
+}
+.hide {
+visibility: hidden;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Javascript assignment instructions</h1>
+<p>For this week, you have a few challenges to complete. Please don't add or remove HTML/CSS code as it will not be necessary for finishing these tasks. You should only be adding JavaScript to the script.js file included in the JS-Challenges-2.zip folder. If you are confused by how any of these challenges should work, please refer to the JavaScript slides located on Blackboard under the Resources folder. There will be a video at the end of the PowerPoint with a quick demo of how these challenges will look. The parts where I state how many lines I finished the challenges in aren't requirements but should give you a benchmark of how many lines you'll need. These are based on assigning buttons and containers to variables rather than using those pieces directly in the code. View the page source for an example of what I'm talking about.</p>
+
+<script>
+/*
+
+var btn = document.getElementById("button");
+btn.onclick = function() {
+
+}
+
+document.getElementById("button").onclick = function() {
+
+}
+
+*/
+
+/* The two code blocks above do the same thing but the difference is that we create a variable for the button in the first block. If we want to do other things with the button, we now have a way to reference it (btn) instead of typing document.getElementById() every time. Both are perfectly fine ways to tackle the challenges below. */
+</script>
+<hr>
+
+<h2>Assignment 2</h2>
+<p>Create a function which will allow a user to change the background color of the div with an id of "box" below. When a user types a color into the input area below and clicks "Submit Color", the background color of the box should change to that color. <strong>This challenge can be done in 5 lines of code or less.</strong></p>
+
+<p><strong><u>Tips</u></strong></p>
+<ul>
+<li>Assign the button to a variable</li>
+<li>Set that button to a onclick function</li>
+<li>AFTER the button is clicked, get the input value</li>
+<li>Change the background color with the .style method</li>
+</ul>
+<label for="colorInput">Enter a Color:</label>
+<input id="colorInput" type="text">
+<button id="submitColor" type="button">Submit Color</button>
+<div id="box" class="box"></div>
+<hr>
+
+<script src="script.js"></script>
+</body>
+</html>
