@@ -22,12 +22,12 @@ print(w, 'Sorted Alphabetically:', sortWords(w))
 def mergeMail(names, body):
     strOut = ""
     for name in names:
-        strOut += "Dear" + name + ",\n\t" + body + "\n"
+        strOut += "Dear " + name + ",\n\t" + body + "\n"
     return strOut
 
 names = ['Rishabh', 'Tony', 'Peter', 'Bruce']
 body = "You are cordially invited to the International Summit For Science And Technology."
-mergeMail(names, body)
+print(mergeMail(names, body))
 
 
 
